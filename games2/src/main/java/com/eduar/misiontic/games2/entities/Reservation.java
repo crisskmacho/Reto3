@@ -16,6 +16,8 @@ public class Reservation implements Serializable {
     private Date startDate;
     private Date devolutionDate;
     private String status = "created";
+
+    private String description;
     @ManyToOne()
     @JoinColumn(name ="game")
     @JsonIgnoreProperties("reservations")
@@ -83,4 +85,15 @@ public class Reservation implements Serializable {
     public void setIdReservation(Integer idReservation) {
         this.idReservation = idReservation;
     }
+
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+
 }
